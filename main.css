@@ -1,0 +1,103 @@
+ /* Basic CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .course-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .course {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            overflow: hidden;
+            max-width: 300px;
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .course:hover {
+            transform: translateY(-5px);
+        }
+
+        .course img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .course .content {
+            padding: 20px;
+        }
+
+        .course h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .course p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .course {
+                max-width: calc(50% - 30px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .course {
+                max-width: calc(100% - 30px);
+            }
+        }
+
+        @import "bourbon";
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+$color: rgba(0,124,205,1);
+
+/* psuedo element animations */
+@include keyframes( downloadBounce ) {
+  to {
+    @include transform( translateY(0px) rotate(50deg) );
+  } 
+}
+@include keyframes( downloadBounce2 ) {
+  to {
+    @include transform( translateY(0px) rotate(-50deg) );
+  } 
+}
+
+body {
+  background: #D6DCE4;
+  text-align: center;
+  padding: 4em 0;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+}
+    </style>
